@@ -28,7 +28,7 @@ h1 {
   font-weight: 500;
 }
 
-h1 > span {
+h1>span {
   color: #00aff0;
 }
 
