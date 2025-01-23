@@ -35,6 +35,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #121212;
   background-color: #fff;
   border: 2px solid #00aaff;
   border-radius: 30px;
@@ -43,6 +44,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .option-button .icon {
@@ -53,6 +55,7 @@ body {
 .option-button:hover {
   background-color: #f0f8ff;
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 .footer {

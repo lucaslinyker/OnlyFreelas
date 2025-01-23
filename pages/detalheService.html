@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalhes do Projeto</title>
   <link rel="stylesheet" href="../css/stylesGlobals.css">
+  <style>
+    main {
+      height: 75vh;
+    }
+
+    main>div {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>OnlyFreelas</h1>
+    <h1>Only<span>Freelas</span></h1>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-list-item">
+          <a class="menu-list-link" href="pageInicialFreelancer.html">Encontre Projeto</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-list-link" href="#">Interesses</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-list-link" href="perfil/index.html">Perfil</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
   <main>
     <div id="detalhes-projeto">
       <h2 id="titulo-projeto"></h2>
       <p id="descricao-projeto"></p>
       <a href="pageInicialFreelancer.html" class="voltar">Voltar</a>
+      <a href="pageInicialFreelancer.html" id="button-interesse" class="voltar">Tenho Interesse</a>
     </div>
   </main>
+
+  <script>
+    const buttonInteresse = document.querySelector('#button-interesse');
+
+    buttonInteresse.addEventListener('click', () => {
+      alert('Interesse enviado com sucesso!');
+      const projetoInteresse = document.querySelector('#titulo-projeto').textContent;
+      localStorage.setItem('interesses', JSON.stringify([
+        ...JSON.parse(localStorage.getItem('interesses') || '[]'),
+        projetoInteresse
+      ]));
+      buttonInteresse.disabled = true;
+    });
+  </script>
   <script src="../js/index.js"></script>
 </body>
 

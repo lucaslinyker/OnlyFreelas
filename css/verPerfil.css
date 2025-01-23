@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 span {
+  color: #00a6e8;
+}
+
+.menu {
+  height: fit-content;
+}
+
+.menu-list {
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu-list-link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  height: calc(100vh - (84px + 67.2px));
+  padding: 0 5rem;
+}
+
+.dados {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+}
+
+.container-left h2 {
+  margin-bottom: 2rem;
+}
+
+.dados a {
+  padding: 0.5rem 2.5rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dados a:hover {
+  background-color: #555;
+}
+
+.descricao {
+  text-align: center;
+}
+
+.descricao h2 {
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer .highlight {
+  color: #00aaff;
+}
